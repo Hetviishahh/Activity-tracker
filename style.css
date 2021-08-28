@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(190, 224, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 30px; 
+}
+
+.abc{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header {
+    background-color: rgb(149, 209, 228);
+    padding: 20px 40px;
+    padding-bottom: 0%;
+}
+
+.header h2{
+    margin: 0%;
+    padding-bottom: 15px;
+}
+
+.form{
+    padding: 20px ;
+}
+
+.form-control{
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.form-control input{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+}
+
+.btn{
+    background-color: rgb(190, 223, 236);
+    border-radius: 3px;
+}
