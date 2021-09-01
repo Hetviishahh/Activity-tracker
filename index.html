@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Routine tracker</title>
     <link rel="stylesheet" href="./style.css">
-
+    
 </head>
 <body>
     <div class="abc">
@@ -14,123 +14,39 @@
         <div class="header">
             <h2>ROUTINE TRACKER</h2>
         </div>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>TASK NAME</label>
-                  <input type="text" 
-                  placeholder="Enter task" id="taskname">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>DATE</label>
-                  <input type="text" 
-                  placeholder="dd/mm/yyyy" id="date">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>TIME</label>
-                  <input type="text" 
-                  placeholder="hours.minutes" id="time">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>IS IT COMPULSORY?</label>
-                  <input type="text" 
-                  placeholder="YES/NO" id="compulsory">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <button class="btn">COMPLETE</button>
-        <button class="btn">EDIT</button>
-        <button class="btn">DELETE</button>
-        <br><br>
-        <button  class="btn">SUBMIT</button>
-    </div>
-    <br>
-    <div class="container">
-        <div class="header">
-            <h2>EXPENSE TRACKER</h2>
+
+       
+    
+    <div >
+        <div>
+            <form class="form" action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+            <label>TASK NAME<br><br></label>
+            <input type="text" id="add-todo" placeholder="Enter Task">
+
+            <br><br><input type="submit" value="Add" class="btn">
+            </form>
+            
         </div>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>INCOME AMOUNT</label>
-                  <input type="text" 
-                  placeholder="Enter income" id="income">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
+        <p>You Have: </p>
+        <p id="counter"></p>
+    
+        <table>
+        <tr class="to-do">
+            <th><h3>To-Do:</h3></th>
+        </tr>
+            <tbody id="tasks">
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="edit-box" role="aria-hidden">
+        <form action="javascript:void(0);" method="POST" id="save-edit">
+          <input type="text" id="edit-todo">
+          <input type="submit" value="Save" class="btn btn-success"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
         </form>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>SAVINGS AMOUNT</label>
-                  <input type="text" 
-                  placeholder="Enter Savings" id="savings">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <h3>EXPENSE ENTRIES</h3>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>TITLE</label>
-                  <input type="text" 
-                  placeholder="Enter first entry" id="entry">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>PRICE</label>
-                  <input type="text" 
-                  placeholder="Enter price" id="price">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>QUANTITY</label>
-                  <input type="text" 
-                  placeholder="Enter Quantity" id="quantity">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <form class="form" id="form">
-              <div class="form-control">
-                  <label>TOTAL AMOUNT</label>
-                  <input type="text" 
-                  placeholder="Enter Total Amount" id="amount">
-                  <!--<i></i>
-                  <i></i>-->
-                  <small>Error Message</small>
-              </div>
-        </form>
-        <button class="btn">PAY</button>
-        <button class="btn">EDIT</button>
-        <button class="btn">DELETE</button>
-        <br><br>
-        <button  class="btn">SUBMIT</button>
-    </div></div>
+      </div>
+ 
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
